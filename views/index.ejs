@@ -5,21 +5,23 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>Message Board</h1>
-    <h2><%= title %></h2>
-    <div id="message-container">
-      <ul class="messages">
+    <div class="headings">
+      <h1>Message Board</h1>
+      <h2><%= title %></h2>
+    </div>
+    <div id="content">
+      <ul id="messages-container">
         <% messages.forEach(message => { %>
-        <li>
-          <p><%= message.text %></p>
-          <p><%= message.user %></p>
-          <p><%= message.added %></p>
+        <li class="message">
+          <p class="text"><%= message.text %></p>
+          <p class="user">By: <strong><%= message.user %></strong></p>
+          <p class="added">On: <strong><%= message.added %></strong></p>
         </li>
         <% }) %>
       </ul>
     </div>
     <a href="/new">
-      <button>Create a new message</button>
+      <button class="nav-button">Create a new message</button>
     </a>
   </body>
 </html>

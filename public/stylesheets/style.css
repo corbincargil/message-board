@@ -1,8 +1,138 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+:root {
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  --bg-color-primary: rgb(200, 200, 200);
+  --bg-color-secondary: maroon;
+  --heading-font-color: rgba(200, 200, 200);
+  --messages-container-bg-color: rgb(88, 88, 88);
+  --message-bg-color: rgba(200, 200, 200, 0.8);
+  --message-text-bg-color: white;
+  --message-text-color-primary: black;
+  --message-text-color-secondary: black;
+  --button-bg-color: white;
+  --button-text-color: black;
+  --button-bg-color-hover: maroon;
+  --button-text-color-hover: white;
+  --content-width-primary: max(300px, 100%);
+  --content-width-secondary: max(150px, 60%);
 }
 
-a {
-  color: #00B7FF;
+body {
+  background-color: var(--bg-color-primary);
+}
+
+.headings {
+  margin: auto;
+  text-align: center;
+  width: var(--content-width-primary);
+  background-color: var(--bg-color-secondary);
+  color: var(--heading-font-color);
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+#content {
+  font-size: 1.3rem;
+  margin: 60px auto;
+  padding: 20px 0;
+  width: var(--content-width-primary);
+  background-color: var(--bg-color-secondary);
+}
+
+#messages-container,
+#new-message-container {
+  margin: auto;
+  padding: 10px;
+  width: var(--content-width-secondary);
+  background-color: var(--messages-container-bg-color);
+  border-radius: 10px;
+}
+
+#new-message-container {
+  width: fit-content;
+}
+
+#new-message-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  margin: 25px;
+  padding: 10px;
+  width: var(--content-width-secondary);
+  background-color: var(--message-bg-color);
+  border-radius: 20px;
+}
+
+p.text {
+  padding: 10px;
+  background-color: var(--message-text-bg-color);
+  color: var(--message-text-color-primary);
+  border-radius: 20px;
+}
+
+p.user,
+p.added {
+  color: var(--message-text-color-secondary);
+  font-size: 0.9rem;
+}
+
+#submit-button,
+.nav-button {
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  border-radius: 10px;
+  outline: 1px solid black;
+}
+
+#submit-button {
+  width: 100px;
+  height: 25px;
+}
+
+.nav-button {
+  font-size: 1.2rem;
+  position: relative;
+  left: 40%;
+  margin: 20px auto;
+  width: 200px;
+  height: 50px;
+}
+
+#submit-button:hover,
+.nav-button:hover {
+  color: var(--button-text-color-hover);
+  background-color: var(--button-bg-color-hover);
+}
+
+textarea {
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  width: 60%;
+  height: 30px;
+  resize: none;
+}
+
+/* styling resets */
+body,
+a,
+a:visited,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
 }

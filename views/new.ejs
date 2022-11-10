@@ -5,29 +5,43 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>Message Board</h1>
-    <h2><%= title %></h2>
-    <div id="new-message-container">
-      <form method="POST" action="/new">
-        <!-- <label for="title">Title:</label>
+    <div class="headings">
+      <h1>Message Board</h1>
+      <h2><%= title %></h2>
+    </div>
+    <div id="content">
+      <div id="new-message-container">
+        <form method="POST" action="/new">
+          <!-- <label for="title">Title:</label>
         <input name="title" type="text" minlength="3" maxlength="40" required /> -->
-        <label for="text">Message:</label>
-        <textarea
-          name="text"
-          type="text"
-          placeholder="Your message here..."
-          cols="30"
-          rows="10"
-          maxlength="120"
-          required
-        ></textarea>
-        <label for="user">Username:</label>
-        <input name="user" type="user" minlength="4" maxlength="20" required />
-        <button type="submit">Send</button>
-      </form>
+          <div>
+            <label for="text">Message:</label>
+            <textarea
+              name="text"
+              type="text"
+              placeholder="Your message here..."
+              cols="30"
+              rows="10"
+              maxlength="120"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <label for="user">Username:</label>
+            <input
+              name="user"
+              type="user"
+              minlength="4"
+              maxlength="20"
+              required
+            />
+          </div>
+          <button id="submit-button" type="submit">Send</button>
+        </form>
+      </div>
     </div>
     <a href="/">
-      <button>Back to message board</button>
+      <button class="nav-button">Back to message board</button>
     </a>
   </body>
 </html>
