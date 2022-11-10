@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Board | <%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Message Board</h1>
+    <h2><%= title %></h2>
+    <div id="new-message-container">
+      <form action="">
+        <label for="title">Title:</label>
+        <input type="text" />
+        <label for="body">Body:</label>
+        <textarea
+          type="text"
+          placeholder="Your message here..."
+          cols="30"
+          rows="10"
+          maxlength="120"
+          required
+        ></textarea>
+        <label for="user">Username:</label>
+        <input type="user" />
+      </form>
+    </div>
+  </body>
+</html>
